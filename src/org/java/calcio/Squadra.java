@@ -10,14 +10,14 @@ public class Squadra {
 
     //costruttori-------------------------------------
 
-    public Squadra(String nomeSquadra, String[] arrayString1, String[] arrayString2, String[] arrayString3) {
+    public Squadra(String nomeSquadra, String[] nomePersona, String[] ruoliGiocatore, String[] strategiaAllenatore) {
         this.nomeSquadra = nomeSquadra;
 
         squadra = new ArrayList<>();
-            Allenatore allenatore = new Allenatore(StaticRandom.nomeCasuale(arrayString1),StaticRandom.etaAllenatoreRandom(),StaticRandom.strategiaCasuale(arrayString3));
+            Allenatore allenatore = new Allenatore(StaticRandom.nomeCasuale(nomePersona),StaticRandom.etaAllenatoreRandom(),StaticRandom.strategiaCasuale(strategiaAllenatore));
             squadra.add(allenatore);
         for (int i = 0; i < 11; i++) {
-            Giocatore giocatore = new Giocatore(StaticRandom.nomeCasuale(arrayString1),StaticRandom.etaRandom(),StaticRandom.ruoloCasuale(arrayString2));
+            Giocatore giocatore = new Giocatore(StaticRandom.nomeCasuale(nomePersona),StaticRandom.etaRandom(),StaticRandom.ruoloCasuale(ruoliGiocatore));
             squadra.add(giocatore);
         }
 
