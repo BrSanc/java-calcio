@@ -41,10 +41,15 @@ public class Partita {
             if (goal == 1) {
                 Partita.squadra1 += 1;
                 System.out.println("Ha segnato la squadra " + squadra1.getNomeSquadra());
+                System.out.println("Goooool!! di "+squadra1.getNomeGiocatore());
+
+
             }
             if (goal == 2) {
                 Partita.squadra2 += 1;
                 System.out.println("Ha segnato la squadra " + squadra2.getNomeSquadra());
+                System.out.println("Goooool!! di "+squadra2.getNomeGiocatore());
+
             }
         }else {
             throw new RuntimeException("Partita non iniziata");

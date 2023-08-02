@@ -6,6 +6,10 @@ import java.util.Locale;
 import java.util.Random;
 
 public class StaticRandom {
+
+    private static final String[] NOMICALCIATORI = {"Mario","Carlos","Roberto","Giacomo","Federico","Hugo","Eric","Cristian","Francesco","Lorenzo","Andrea","Riccardo","Diego","Marco","Davide"};
+    private static final String[] RUOLICALCIATORI = {"Portiere","Attacante","Difensore","Centrocampista"};
+    private static final String[] STRATEGIEALLENATORE = {"4-2-3-1","3-4-3","4-5-1","4-4-2"};
     Random random = new Random();
 
     /* public static String ruoloCasuale (ArrayList arrayList){

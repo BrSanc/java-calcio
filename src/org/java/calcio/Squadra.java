@@ -7,14 +7,17 @@ public class Squadra {
     private static List<Persona> squadra;
     private String nomeSquadra;
 
+    private String nomeGiocatore;
+
 
     //costruttori-------------------------------------
 
     public Squadra(String nomeSquadra, String[] nomePersona, String[] ruoliGiocatore, String[] strategiaAllenatore) {
         this.nomeSquadra = nomeSquadra;
+        this.nomeGiocatore = StaticRandom.nomeCasuale(nomePersona);
 
         squadra = new ArrayList<>();
-            Allenatore allenatore = new Allenatore(StaticRandom.nomeCasuale(nomePersona),StaticRandom.etaAllenatoreRandom(),StaticRandom.strategiaCasuale(strategiaAllenatore));
+            Allenatore allenatore = new Allenatore(nomeGiocatore,StaticRandom.etaAllenatoreRandom(),StaticRandom.strategiaCasuale(strategiaAllenatore));
             squadra.add(allenatore);
         for (int i = 0; i < 11; i++) {
             Giocatore giocatore = new Giocatore(StaticRandom.nomeCasuale(nomePersona),StaticRandom.etaRandom(),StaticRandom.ruoloCasuale(ruoliGiocatore));
@@ -34,7 +37,9 @@ public class Squadra {
         return nomeSquadra;
     }
 
-
+    public String getNomeGiocatore() {
+        return nomeGiocatore;
+    }
 
     //Setter-------------------------------------
 
