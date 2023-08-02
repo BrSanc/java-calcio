@@ -11,6 +11,7 @@ public class Allenatore extends Persona{
         this.strategia = strategia;
     }
 
+
     //Metodi----------------------------
 
 

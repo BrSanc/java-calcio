@@ -13,6 +13,12 @@ public class StaticRandom {
         String nomeCasuale = String.valueOf(arrayList.get(random.nextInt(0,arrayList.size())));
         return nomeCasuale;
     }*/
+
+    public static String strategiaCasuale(String[] arrayString){
+        Random random = new Random();
+        String nomeCasuale = arrayString[random.nextInt(0, arrayString.length)];
+        return nomeCasuale;
+    }
     public static String ruoloCasuale(String[] arrayString){
         Random random = new Random();
         String nomeCasuale = arrayString[random.nextInt(0, arrayString.length)];
@@ -29,6 +35,12 @@ public class StaticRandom {
     public static int etaRandom(){
         Random random = new Random();
         int etaRandom = random.nextInt(21,35);
+        return etaRandom;
+    }
+
+    public static int etaAllenatoreRandom(){
+        Random random = new Random();
+        int etaRandom = random.nextInt(30,55);
         return etaRandom;
     }
 
